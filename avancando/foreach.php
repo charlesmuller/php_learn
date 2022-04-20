@@ -2,24 +2,22 @@
 
 $contasCorrentes = [
     '123.456.789-10' => [
-        'titular' => 'Charles', 
+        'titular' => 'Fofão', 
         'saldo' => 1000
     ], 
     '123.400.789-11' => [
-        'titular' => 'Maria',
+        'titular' => 'Pelé',
         'saldo' => 10000
     ], 
     '125.556.789-88' => [
-        'titular' => 'João',
+        'titular' => 'Didi',
         'saldo' => 250
+    ],
+    '123.999.000-80' => [
+        'titular' => 'Xuxa',
+        'saldo' => 500
     ]
 ];
-
-$contasCorrentes['123.999.000-80'] = [
-    'titular' => 'José',
-    'saldo' => 500
-];
-
 
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
