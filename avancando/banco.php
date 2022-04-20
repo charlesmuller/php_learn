@@ -1,5 +1,5 @@
 <?php
-## exibeMensagem é a criação de uma subrotina
+## exibeMensagem() é a criação de uma subrotina
 
 function exibeMensagem($mensagem){
     echo $mensagem . PHP_EOL;
