@@ -31,12 +31,6 @@ $contasCorrentes = [
     ]
 ];
 
-
-if(500 > $contasCorrentes ['123.400.789-11']['saldo']){
-    exibeMensagem("Você não pode sacar");
-}else{
-    $contasCorrentes ['123.400.789-11']['saldo'] -= 500;
-}
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
 $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 500);
 
