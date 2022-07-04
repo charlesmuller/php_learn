@@ -13,6 +13,7 @@ function sacar($conta, $valorASacar)
     }else{
         $conta['saldo'] -= $valorASacar;
     }
+    return $conta;
 }
 
 $contasCorrentes = [
@@ -31,6 +32,7 @@ $contasCorrentes = [
 ];
 
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
+$contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 500);
 
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
