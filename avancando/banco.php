@@ -34,7 +34,7 @@ $contasCorrentes = [
     ]
 ];
 
-$contasCorrentes['125.556.789-88.'] = depositar($contasCorrentes['125.556.789-88.'], 900);
+$contasCorrentes['125.556.789-88'] = depositar($contasCorrentes['125.556.789-88'], 900);
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
 $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 500);
 
@@ -42,5 +42,5 @@ $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 5
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
 foreach ($contasCorrentes as $cpf => $conta ){
-    echo $cpf . ' ' . $conta['titular'] . ' ' . $conta['saldo'] . PHP_EOL;
+    echo $cpf . " " . $conta['titular'] . " " . $conta['saldo'] . PHP_EOL;
 }
