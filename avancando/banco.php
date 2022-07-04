@@ -1,18 +1,21 @@
 <?php
 ## exibeMensagem() é a criação de uma subrotina
 
-function exibeMensagem($mensagem)
-{
+function exibeMensagem($mensagem){
     echo $mensagem . PHP_EOL;
 }
 
-function sacar($conta, $valorASacar)
-{
+function sacar($conta, $valorASacar){
     if($valorASacar > $conta['saldo']) {
         exibeMensagem("Você não pode sacar");
     }else{
         $conta['saldo'] -= $valorASacar;
     }
+    return $conta;
+}
+
+function depositar($conta, $valorADepositar){
+    $conta['saldo'] += $valorADepositar;
     return $conta;
 }
 
@@ -31,6 +34,7 @@ $contasCorrentes = [
     ]
 ];
 
+$contasCorrentes['125.556.789-88.'] = depositar($contasCorrentes['125.556.789-88.'], 900);
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
 $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 500);
 
