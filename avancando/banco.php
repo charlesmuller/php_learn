@@ -44,9 +44,3 @@ $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 5
 foreach ($contasCorrentes as $cpf => $conta ){
     echo $cpf . ' ' . $conta['titular'] . ' ' . $conta['saldo'] . PHP_EOL;
 }
-
-
-
-
-
-echo "teste";
