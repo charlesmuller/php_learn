@@ -15,7 +15,11 @@ function sacar($conta, $valorASacar){
 }
 
 function depositar($conta, $valorADepositar){
-    $conta['saldo'] += $valorADepositar;
+    if ($valorADepositar > 0) {
+        $conta['saldo'] += $valorADepositar;
+     }else {
+        exibeMensagem("Depósitos precisam ser positivos");
+    }
     return $conta;
 }
 
@@ -34,9 +38,10 @@ $contasCorrentes = [
     ]
 ];
 
-$contasCorrentes['125.556.789-88'] = depositar($contasCorrentes['125.556.789-88'], 900);
-$contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 500);
-$contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 500);
+$contasCorrentes['125.556.789-88'] = depositar($contasCorrentes['125.556.789-88'], 500);
+
+$contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'], 200);
+$contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 200);
 
 
 ## para imprimir os indices que são os CPF dessas contas
