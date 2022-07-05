@@ -1,11 +1,12 @@
 <?php
 ## exibeMensagem() é a criação de uma subrotina
-
-function exibeMensagem($mensagem){
+function exibeMensagem(string $mensagem)
+{
     echo $mensagem . PHP_EOL;
 }
 
-function sacar($conta, $valorASacar){
+function sacar(array $conta, float $valorASacar): array
+{
     if($valorASacar > $conta['saldo']) {
         exibeMensagem("Você não pode sacar");
     }else{
@@ -14,7 +15,8 @@ function sacar($conta, $valorASacar){
     return $conta;
 }
 
-function depositar($conta, $valorADepositar){
+function depositar(array $conta, float $valorADepositar): array
+{
     if ($valorADepositar > 0) {
         $conta['saldo'] += $valorADepositar;
      }else {
@@ -47,5 +49,7 @@ $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 2
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
 foreach ($contasCorrentes as $cpf => $conta ){
-    echo $cpf . " " . $conta['titular'] . " " . $conta['saldo'] . PHP_EOL;
+    exibeMensagem(
+        "$cpf {$conta['titular']} {$conta['saldo']}"
+    );
 }
