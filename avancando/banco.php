@@ -25,6 +25,8 @@ $contasCorrentes['123.400.789-11'] = sacar($contasCorrentes['123.400.789-11'], 2
 
 titularLetrasMaiusculas($contasCorrentes['125.556.789-88']);
 
+unset($contasCorrentes['123.400.789-11']);
+
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
 foreach ($contasCorrentes as $cpf => $conta ){
