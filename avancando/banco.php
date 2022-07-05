@@ -28,7 +28,8 @@ titularLetrasMaiusculas($contasCorrentes['125.556.789-88']);
 ## para imprimir os indices que são os CPF dessas contas
 ## acima é feito o foreach para pode buscar dentro do array
 foreach ($contasCorrentes as $cpf => $conta ){
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
     exibeMensagem(
-        "$cpf {$conta['titular']} {$conta['saldo']}"
+        "$cpf $titular $saldo"
     );
 }
