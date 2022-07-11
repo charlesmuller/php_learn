@@ -1,8 +1,10 @@
 <?php
 $array = [
     1 => 'um',
-    true => 'dois',
-    1.9 => 'três'
+    2 => 'dois',
+    3 => 'três'
 ];
 
-var_dump($array);
+foreach ($array as $numeral => $nomeNumero) {
+    echo "$numeral em português por escrito é: $nomeNumero" . PHP_EOL;
+}
