@@ -24,3 +24,6 @@ var_dump(isset($notas['Vinicius'])); // retorna true ou false informando se o el
 
 echo 'Alguém tirou nota 10?' . PHP_EOL;
 var_dump(in_array(10, $notas)); // retorna true ou false informando se o valor existe
+
+echo 'Quem tirou 10?' . PHP_EOL;
+echo array_search(10, $notas); // retorna a chave do array que possui o valor passado no primeiro parametro da função
