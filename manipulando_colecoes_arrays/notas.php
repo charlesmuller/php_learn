@@ -8,5 +8,6 @@ $notas = [
 ];
 //do maior para o menor
 arsort($notas);
-//arsort mantem as chaves quando vai ordenar
+//arsort() mantem as chaves quando vai ordenar
+//ksort() ordena pela ordem das chaves e o krsort para descrescente
 var_dump($notas);
