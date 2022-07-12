@@ -16,7 +16,11 @@ var_dump($notas);
 
 var_dump(array_is_list($notas)); // retorna true ou false informando se a variável é array
 
-var_dump(array_key_exists('Vinicius', $notas)); // retorna true ou false informando se a key existe no array
+echo 'Vinicius está na lista?' . PHP_EOL;
+var_dump(array_key_exists('Vinicius', $notas)); // retorna true ou false informando se a chave do array existe no array
 
-var_dump(isset($notas['Vinicius'])); // retorna true ou false informando se o elemento tem valor setado
+echo 'Vinicius fez a prova?' . PHP_EOL;
+var_dump(isset($notas['Vinicius'])); // retorna true ou false informando se o elemento tem valor setado e é diferente de nulo
 
+echo 'Alguém tirou nota 10?' . PHP_EOL;
+var_dump(in_array(10, $notas)); // retorna true ou false informando se o valor existe
