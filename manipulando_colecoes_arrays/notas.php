@@ -7,8 +7,9 @@ $notas = [
     'Vinicius' => 6
 ];
 //do maior para o menor
-arsort($notas);
+//arsort($notas);
 //arsort() mantem as chaves quando vai ordenar
 //ksort() ordena pela ordem das chaves e o krsort para descrescente
-var_dump($notas);
+//var_dump($notas);
 
+var_dump(array_is_list($notas));

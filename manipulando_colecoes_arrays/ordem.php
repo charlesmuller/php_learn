@@ -1,11 +1,11 @@
 <?php
-//$notas = [
-//    10,
-//    8,
-//    9,
-//    7
-//];
-//
+$notas = [
+    10,
+    8,
+    9,
+    7
+];
+
 //$notasOrdenadas = $notas;
 //sort($notasOrdenadas);
 //
@@ -14,7 +14,7 @@
 //
 //echo "Ordenadas: ";
 //var_dump($notasOrdenadas);
-//
+
 $notas2 = [
     [
         'aluno' => 'Maria',
@@ -50,3 +50,9 @@ function ordenaNotas(array $nota1, array $nota2): int
 
 usort ($notas2, 'ordenaNotas');
 var_dump($notas2);
+
+if (is_array($notas2)) {
+    echo 'Sim, é um array' . PHP_EOL;
+}
+
+var_dump(array_is_list($notas));
