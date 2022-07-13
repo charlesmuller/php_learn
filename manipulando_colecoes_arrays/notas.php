@@ -27,3 +27,4 @@ var_dump(in_array(10, $notas)); // retorna true ou false informando se o valor e
 
 echo 'Quem tirou 10?' . PHP_EOL;
 echo array_search(10, $notas); // retorna a chave do array que possui o valor passado no primeiro parametro da função
+
