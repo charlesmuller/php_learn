@@ -7,11 +7,11 @@ $notas = [
     'Vinicius' => null,
 ];
 //do maior para o menor
-//arsort($notas);
+arsort($notas);
 
 
-//arsort($notas)  //mantem as chaves quando vai ordenar
-//ksort($notas) //ordena pela ordem das chaves e o krsort para descrescente
+arsort($notas);  //mantem as chaves quando vai ordenar
+ksort($notas); //ordena pela ordem das chaves e o krsort para descrescente
 var_dump($notas);
 
 var_dump(array_is_list($notas)); // retorna true ou false informando se a variável é array
